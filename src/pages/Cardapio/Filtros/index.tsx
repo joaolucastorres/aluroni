@@ -1,6 +1,6 @@
-import filtros from './filtros.json'
-import styles from './Filtros.module.scss'
-import classNames from 'classnames'
+import filtros from './filtros.json';
+import styles from './Filtros.module.scss';
+import classNames from 'classnames';
 
 type IOpcao = typeof filtros[0]
 
@@ -11,8 +11,8 @@ interface Props {
 
 export default function Filtros({ filtro, setFiltro }: Props) {
   function selecionaFiltro(opcao: IOpcao) {
-    if (opcao.id === filtro) return setFiltro(null)
-    return setFiltro(opcao.id)
+    if (opcao.id === filtro) return setFiltro(null);
+    return setFiltro(opcao.id);
   }
 
   return (
@@ -21,10 +21,10 @@ export default function Filtros({ filtro, setFiltro }: Props) {
         filtros.map(opcao => (
           <button className={classNames({
             [styles.filtros__filtro]: true,
-            [styles["filtros__filtro--ativo"]]: opcao.id === filtro
+            [styles['filtros__filtro--ativo']]: opcao.id === filtro
           })}
-            key={opcao.id}
-            onClick={() => selecionaFiltro(opcao)}>
+          key={opcao.id}
+          onClick={() => selecionaFiltro(opcao)}>
             {opcao.label}
           </button>
         )
@@ -32,5 +32,5 @@ export default function Filtros({ filtro, setFiltro }: Props) {
         )
       }
     </div>
-  )
+  );
 }
