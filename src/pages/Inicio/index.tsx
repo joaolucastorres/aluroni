@@ -16,7 +16,7 @@ export default function Inicio() {
         {pratosRecomendados.map(item => (
           <div key={item.id} className={styles.recomendado}>
             <div className={styles.recomendado__imagem}>
-              <img src={item.photo} alt={item.title} />
+              <img src={process.env.PUBLIC_URL + item.photo} alt={item.title} />
             </div>
             <button onClick={() => navigate(`/prato/${item.id}`)}
               className={styles.recomendado__botao}>Ver mais</button>

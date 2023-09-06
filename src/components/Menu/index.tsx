@@ -5,15 +5,15 @@ import { Link } from 'react-router-dom';
 export default function Menu() {
   const rotas = [{
     label: 'Início',
-    to: '/'
+    to: '/aluroni'
   },
   {
     label: 'Cardápio',
-    to: '/cardapio'
+    to: '/aluroni/cardapio'
   },
   {
     label: 'Sobre',
-    to: '/sobre'
+    to: '/aluroni/sobre'
   }
   ];
 
