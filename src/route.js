@@ -15,23 +15,23 @@ export default function Router() {
       <BrowserRouter>
         <Menu />
         <Routes>
-          <Route path="/"
+          <Route path="/aluroni"
             element={<PaginaPadrao />}
           >
             <Route index
               element={<Inicio />}
             />
-            <Route path="cardapio"
+            <Route path="/aluroni/cardapio"
               element={<Cardapio />}
             />
-            <Route path="sobre"
+            <Route path="/aluroni/sobre"
               element={<Sobre />}
             />
           </Route>
-          <Route path="prato/:id"
+          <Route path="/aluroni/prato/:id"
             element={<Prato />}
           />
-          <Route path="*"
+          <Route path="/aluroni/*"
             element={<NotFound />}
           />
         </Routes>
